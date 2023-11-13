@@ -11,6 +11,17 @@ SELECT first_name, last_name
 FROM actor
 WHERE first_name = 'Nick';
 
+SELECT staff_id, COUNT(*) as rental_count
+FROM rental
+GROUP BY staff_id
+ORDER BY rental_count DESC
+LIMIT 1;
+
+
+SELECT COUNT(*) 
+FROM customer
+WHERE last_name LIKE '%es';
+
 -- Query for a first_name that equals Nick using the LIKE and WHERE clauses
 SELECT first_name, last_name
 FROM actor
